@@ -7,23 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0644232AE83AB500703291 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0644222AE83AB500703291 /* Services.swift */; };
+		CE0644252AE83ABC00703291 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0644242AE83ABC00703291 /* Protocols.swift */; };
+		CE0644262AE83B3B00703291 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0644242AE83ABC00703291 /* Protocols.swift */; };
 		CE9F876A2AE80F9200953ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F87692AE80F9200953ABA /* AppDelegate.swift */; };
-		CE9F876C2AE80F9200953ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F876B2AE80F9200953ABA /* ViewController.swift */; };
 		CE9F876E2AE80F9300953ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9F876D2AE80F9300953ABA /* Assets.xcassets */; };
-		CE9F87712AE80F9300953ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9F876F2AE80F9300953ABA /* Main.storyboard */; };
+		CE9F87792AE80FED00953ABA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F87782AE80FED00953ABA /* Client.swift */; };
+		CE9F877C2AE8102B00953ABA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F877B2AE8102B00953ABA /* Constants.swift */; };
+		CE9F87842AE810C700953ABA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F87832AE810C700953ABA /* main.swift */; };
+		CE9F87892AE8110E00953ABA /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F87882AE8110E00953ABA /* Server.swift */; };
+		CE9F878A2AE8117D00953ABA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F877B2AE8102B00953ABA /* Constants.swift */; };
+		CE9F878E2AE811E000953ABA /* com.serena.Serph.helper in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE9F87812AE810C700953ABA /* com.serena.Serph.helper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE9F87922AE812EC00953ABA /* BlessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F87912AE812EC00953ABA /* BlessHelper.swift */; };
+		CEE958E12AE854400050D79A /* TriggerMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE958E02AE854400050D79A /* TriggerMonitor.swift */; };
+		CEEFA32C2AE855DA00D96D81 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFA32B2AE855DA00D96D81 /* Preferences.swift */; };
+		CEFCD8CC2AE93C7500F1EFC9 /* ApplicationsTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCD8CB2AE93C7500F1EFC9 /* ApplicationsTrigger.swift */; };
+		CEFCD8D02AE942B000F1EFC9 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCD8CF2AE942B000F1EFC9 /* WindowController.swift */; };
+		CEFCD8D22AE9435800F1EFC9 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCD8D12AE9435800F1EFC9 /* PreferencesView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CE9F878B2AE811C000953ABA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE9F875E2AE80F9200953ABA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE9F87802AE810C700953ABA;
+			remoteInfo = Helper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9F877F2AE810C700953ABA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		CE9F878D2AE811C800953ABA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				CE9F878E2AE811E000953ABA /* com.serena.Serph.helper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CE0644222AE83AB500703291 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		CE0644242AE83ABC00703291 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CE9F87662AE80F9200953ABA /* Serph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Serph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9F87692AE80F9200953ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE9F876B2AE80F9200953ABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE9F876D2AE80F9300953ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE9F87702AE80F9300953ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9F87722AE80F9300953ABA /* Serph.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Serph.entitlements; sourceTree = "<group>"; };
+		CE9F87782AE80FED00953ABA /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		CE9F877B2AE8102B00953ABA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE9F87812AE810C700953ABA /* com.serena.Serph.helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.serena.Serph.helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9F87832AE810C700953ABA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CE9F87882AE8110E00953ABA /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		CE9F878F2AE8127500953ABA /* launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = launchd.plist; sourceTree = "<group>"; };
+		CE9F87902AE8127500953ABA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9F87912AE812EC00953ABA /* BlessHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlessHelper.swift; sourceTree = "<group>"; };
+		CE9F87932AE8144500953ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CEE958DF2AE8497E0050D79A /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		CEE958E02AE854400050D79A /* TriggerMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerMonitor.swift; sourceTree = "<group>"; };
+		CEEFA32B2AE855DA00D96D81 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		CEFCD8CB2AE93C7500F1EFC9 /* ApplicationsTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsTrigger.swift; sourceTree = "<group>"; };
+		CEFCD8CF2AE942B000F1EFC9 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		CEFCD8D12AE9435800F1EFC9 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE9F87632AE80F9200953ABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9F877E2AE810C700953ABA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				CE9F87682AE80F9200953ABA /* Serph */,
+				CE9F877A2AE8101C00953ABA /* Shared */,
+				CE9F87822AE810C700953ABA /* Helper */,
 				CE9F87672AE80F9200953ABA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9F87662AE80F9200953ABA /* Serph.app */,
+				CE9F87812AE810C700953ABA /* com.serena.Serph.helper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,13 +122,57 @@
 		CE9F87682AE80F9200953ABA /* Serph */ = {
 			isa = PBXGroup;
 			children = (
+				CE9F87932AE8144500953ABA /* Info.plist */,
 				CE9F87692AE80F9200953ABA /* AppDelegate.swift */,
-				CE9F876B2AE80F9200953ABA /* ViewController.swift */,
+				CEFCD8CF2AE942B000F1EFC9 /* WindowController.swift */,
+				CEFCD8D12AE9435800F1EFC9 /* PreferencesView.swift */,
+				CEFCD8CD2AE940DD00F1EFC9 /* DaemonHelper */,
+				CEFCD8CE2AE9410100F1EFC9 /* Triggers */,
+				CEEFA32B2AE855DA00D96D81 /* Preferences.swift */,
 				CE9F876D2AE80F9300953ABA /* Assets.xcassets */,
-				CE9F876F2AE80F9300953ABA /* Main.storyboard */,
 				CE9F87722AE80F9300953ABA /* Serph.entitlements */,
 			);
 			path = Serph;
+			sourceTree = "<group>";
+		};
+		CE9F877A2AE8101C00953ABA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F877B2AE8102B00953ABA /* Constants.swift */,
+				CE0644242AE83ABC00703291 /* Protocols.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CE9F87822AE810C700953ABA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F87832AE810C700953ABA /* main.swift */,
+				CE9F87882AE8110E00953ABA /* Server.swift */,
+				CE0644222AE83AB500703291 /* Services.swift */,
+				CEE958DF2AE8497E0050D79A /* Bridge.h */,
+				CE9F87902AE8127500953ABA /* Info.plist */,
+				CE9F878F2AE8127500953ABA /* launchd.plist */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CEFCD8CD2AE940DD00F1EFC9 /* DaemonHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F87912AE812EC00953ABA /* BlessHelper.swift */,
+				CE9F87782AE80FED00953ABA /* Client.swift */,
+			);
+			path = DaemonHelper;
+			sourceTree = "<group>";
+		};
+		CEFCD8CE2AE9410100F1EFC9 /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				CEE958E02AE854400050D79A /* TriggerMonitor.swift */,
+				CEFCD8CB2AE93C7500F1EFC9 /* ApplicationsTrigger.swift */,
+			);
+			path = Triggers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,15 +185,34 @@
 				CE9F87622AE80F9200953ABA /* Sources */,
 				CE9F87632AE80F9200953ABA /* Frameworks */,
 				CE9F87642AE80F9200953ABA /* Resources */,
+				CE9F878D2AE811C800953ABA /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE9F878C2AE811C000953ABA /* PBXTargetDependency */,
 			);
 			name = Serph;
 			productName = Serph;
 			productReference = CE9F87662AE80F9200953ABA /* Serph.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE9F87802AE810C700953ABA /* Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9F87852AE810C700953ABA /* Build configuration list for PBXNativeTarget "Helper" */;
+			buildPhases = (
+				CE9F877D2AE810C700953ABA /* Sources */,
+				CE9F877E2AE810C700953ABA /* Frameworks */,
+				CE9F877F2AE810C700953ABA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Helper;
+			productName = Helper;
+			productReference = CE9F87812AE810C700953ABA /* com.serena.Serph.helper */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +225,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CE9F87652AE80F9200953ABA = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					CE9F87802AE810C700953ABA = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -110,6 +246,7 @@
 			projectRoot = "";
 			targets = (
 				CE9F87652AE80F9200953ABA /* Serph */,
+				CE9F87802AE810C700953ABA /* Helper */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9F876E2AE80F9300953ABA /* Assets.xcassets in Resources */,
-				CE9F87712AE80F9300953ABA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,23 +267,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9F876C2AE80F9200953ABA /* ViewController.swift in Sources */,
+				CE9F87792AE80FED00953ABA /* Client.swift in Sources */,
+				CEEFA32C2AE855DA00D96D81 /* Preferences.swift in Sources */,
+				CE9F87922AE812EC00953ABA /* BlessHelper.swift in Sources */,
+				CE0644262AE83B3B00703291 /* Protocols.swift in Sources */,
+				CEFCD8D02AE942B000F1EFC9 /* WindowController.swift in Sources */,
+				CEFCD8D22AE9435800F1EFC9 /* PreferencesView.swift in Sources */,
 				CE9F876A2AE80F9200953ABA /* AppDelegate.swift in Sources */,
+				CEE958E12AE854400050D79A /* TriggerMonitor.swift in Sources */,
+				CE9F877C2AE8102B00953ABA /* Constants.swift in Sources */,
+				CEFCD8CC2AE93C7500F1EFC9 /* ApplicationsTrigger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9F877D2AE810C700953ABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0644252AE83ABC00703291 /* Protocols.swift in Sources */,
+				CE9F87892AE8110E00953ABA /* Server.swift in Sources */,
+				CE0644232AE83AB500703291 /* Services.swift in Sources */,
+				CE9F87842AE810C700953ABA /* main.swift in Sources */,
+				CE9F878A2AE8117D00953ABA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		CE9F876F2AE80F9300953ABA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE9F87702AE80F9300953ABA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		CE9F878C2AE811C000953ABA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE9F87802AE810C700953ABA /* Helper */;
+			targetProxy = CE9F878B2AE811C000953ABA /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CE9F87732AE80F9300953ABA /* Debug */ = {
@@ -274,19 +427,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Serph/Serph.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9735M962H;
+				DEVELOPMENT_TEAM = 82CWTJRJZZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Serph/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serena.Serph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,23 +456,71 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Serph/Serph.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9735M962H;
+				DEVELOPMENT_TEAM = 82CWTJRJZZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Serph/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serena.Serph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CE9F87862AE810C700953ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = 82CWTJRJZZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Helper/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"$(SRCROOT)/$(TARGET_NAME)/launchd.plist",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.serena.Serph.helper;
+				PRODUCT_NAME = com.serena.Serph.helper;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Bridge.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE9F87872AE810C700953ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = 82CWTJRJZZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Helper/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"$(SRCROOT)/$(TARGET_NAME)/launchd.plist",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.serena.Serph.helper;
+				PRODUCT_NAME = com.serena.Serph.helper;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Bridge.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -339,6 +542,15 @@
 			buildConfigurations = (
 				CE9F87762AE80F9300953ABA /* Debug */,
 				CE9F87772AE80F9300953ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9F87852AE810C700953ABA /* Build configuration list for PBXNativeTarget "Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9F87862AE810C700953ABA /* Debug */,
+				CE9F87872AE810C700953ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
