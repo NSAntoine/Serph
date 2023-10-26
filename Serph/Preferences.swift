@@ -42,10 +42,30 @@ struct CodableStorage<Value: Codable> {
     }
 }
 
+// Values here must always adhere to their IOKit ones
+enum PowerSource: String, CaseIterable, Hashable {
+    case ups = "UPS Power"
+    case battery = "Battery Power"
+    case acPower = "AC Power"
+}
+
 enum Preferences {
     @CodableStorage(key: "AppTriggers", defaultValue: [:])
     static var appTriggers: [ApplicationTrigger: PowerModeSetting]
     
-    @Storage(key: "didAuthorizeLaunchAgentBefore", defaultValue: false)
-    static var didAuthorizeLaunchAgentBefore: Bool
+    @Storage(key: "LastAuthorizedHelperHash", defaultValue: nil)
+    static var lastAuthorizedHelperHash: String?
+    
+    @Storage(key: "PowerSource", defaultValue: PowerSource.battery.rawValue)
+    static private var _powerSourceRaw: String
+    
+    static var powerSource: PowerSource {
+        get {
+            return PowerSource(rawValue: _powerSourceRaw) ?? .battery
+        }
+        
+        set {
+            _powerSourceRaw = newValue.rawValue
+        }
+    }
 }

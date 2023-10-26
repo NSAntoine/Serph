@@ -9,5 +9,5 @@ import Foundation
 
 @objc public protocol SerphRootServicesProtocol {
     
-    func setLowPowerModeStatus(status: PowerModeSetting, handler: @escaping (IOReturn) -> Void)
+    func setLowPowerModeStatus(status: PowerModeSetting, powerSource: String, handler: @escaping (IOReturn) -> Void)
 }

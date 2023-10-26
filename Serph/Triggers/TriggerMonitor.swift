@@ -38,6 +38,7 @@ class ApplicationsTriggerMonitor: TriggerMonitor {
             for app in NSWorkspace.shared.runningApplications {
                 if prefs.contains(where: { (key, value) in
                     if key.applicationBundleID != bundleID, key.applicationBundleID == app.bundleIdentifier {
+                        print("here")
                         return value != fromPrefs
                     }
                     return false

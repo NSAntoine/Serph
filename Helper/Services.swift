@@ -10,7 +10,7 @@ import IOKit.ps
 
 class SerphRootServices: NSObject, SerphRootServicesProtocol {
     
-    func setLowPowerModeStatus(status: PowerModeSetting, handler: @escaping (IOReturn) -> Void) {
+    func setLowPowerModeStatus(status: PowerModeSetting, powerSource: String, handler: @escaping (IOReturn) -> Void) {
         var newValue: CFNumber
         switch status {
         case .on:
@@ -20,7 +20,7 @@ class SerphRootServices: NSObject, SerphRootServicesProtocol {
         case .opposite:
             // Get current value
             var current: Unmanaged<CFTypeRef>?
-            IOPMCopyPMSetting("LowPowerMode" as CFString, nil, &current)
+            IOPMCopyPMSetting("LowPowerMode" as CFString, powerSource as CFString, &current)
             if var current = current?.takeUnretainedValue() as? Bool {
                 // flip the current value
                 current.toggle()
@@ -31,7 +31,7 @@ class SerphRootServices: NSObject, SerphRootServicesProtocol {
         }
         
         // Here is where we actually set LPM to on/off btw
-        let returnStatus = IOPMSetPMPreference("LowPowerMode" as CFString, newValue, nil)
+        let returnStatus = IOPMSetPMPreference("LowPowerMode" as CFString, newValue, powerSource as CFString)
         handler(returnStatus)
     }
 }

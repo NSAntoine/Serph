@@ -22,7 +22,8 @@ class Client {
     }
     
     func setLowPowerModeStatus(status: PowerModeSetting, handler: @escaping (IOReturn) -> Void) {
-        proxy()?.setLowPowerModeStatus(status: status, handler: handler)
+        print("Calling XPC")
+        proxy()?.setLowPowerModeStatus(status: status, powerSource: Preferences.powerSource.rawValue, handler: handler)
     }
     
     func proxy() -> SerphRootServicesProtocol? {

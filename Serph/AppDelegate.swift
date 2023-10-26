@@ -7,6 +7,7 @@
 
 import Cocoa
 import class SwiftUI.NSHostingController
+import CryptoKit
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -20,14 +21,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared.run()
     }
 
+    // Get the hash of the helper
+    func helperHash() -> String {
+        let helperPath = Bundle.main.bundleURL
+            .appendingPathComponent("Contents")
+            .appendingPathComponent("Library/LaunchServices/\(Constants.helperMachLabel)")
+        let hash = SHA256.hash(data: try! Data(contentsOf: helperPath))
+        
+        return hash.compactMap { String(format: "%02x", $0) }.joined()
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        if !Preferences.didAuthorizeLaunchAgentBefore {
+        addStatusItem()
+        
+        let hash = helperHash()
+        // SMJobBless asks for authorizatione everytime you call it
+        // and you need to re-call it once the hash of the helper changes
+        // so we compare it with the last authorized one and if it's not the same
+        // (or if there is no hash in prefs)
+        // prompt the user w SMJobBless
+        if Preferences.lastAuthorizedHelperHash != hash {
             do {
                 try BlessHelper.authorizeTool(Constants.helperMachLabel)
                 print("got here")
-                Preferences.didAuthorizeLaunchAgentBefore = true
+                Preferences.lastAuthorizedHelperHash = hash
             } catch {
                 print("catch!")
                 
@@ -48,7 +67,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ApplicationsTriggerMonitor.shared.startMonitoring()
         
         Client.shared.start()
-        
+    }
+    
+    func addStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         statusItem.button?.image = .minusPlusBatteryblock
         
@@ -62,6 +83,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem.separator())
         
+        let sourceItem = NSMenuItem(title: "Power Source", action: nil, keyEquivalent: "")
+        sourceItem.submenu = powerSourceSubmenu()
+        menu.addItem(sourceItem)
+        
+        menu.addItem(NSMenuItem.separator())
+        
         let quitItem = menu.addItem(withTitle: "Quit", action: #selector(quit), keyEquivalent: "q")
         quitItem.keyEquivalentModifierMask = .command
         
@@ -69,7 +96,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusItem.menu = menu
     }
-
+    
+    func powerSourceSubmenu() -> NSMenu {
+        let menu = NSMenu()
+        
+        for (index, source) in PowerSource.allCases.enumerated() {
+            let item = NSMenuItem(title: source.rawValue, action: #selector(setPowerSource(sender:)), keyEquivalent: "")
+            item.tag = index
+            item.state = Preferences.powerSource == source ? .on : .off
+            menu.addItem(item)
+        }
+        
+        return menu
+    }
+    
+    @objc
+    func setPowerSource(sender: NSMenuItem) {
+        let chosenSource = PowerSource.allCases[sender.tag]
+        Preferences.powerSource = chosenSource
+        
+        for item in sender.menu?.items ?? [] {
+            item.state = (item.tag == sender.tag) ? .on : .off
+        }
+    }
+    
     @objc
     func quit() {
         NSApplication.shared.terminate(nil)
